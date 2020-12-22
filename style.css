@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(154, 199, 199);
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+}
+
+header {
+	background-color: rgb(47, 117, 134);
+	display: grid;
+	grid-template-rows: 1fr min-content;
+	position: sticky;
+	top: 0;
+}
+
+.masthead {
+	padding: 5px;
+	font-family: 'Roboto Slab', serif;
+	font-size: x-large;
+	font-weight: bolder;
+	color: rgb(220, 220, 220);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav {
+	padding: 5px;
+	background-color: rgba(113, 113, 129, .70);
+	font-family: Consolas;
+	font-size: small;
+	color:gainsboro;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mid-body {
+	display: grid;
+	grid-template-columns: 10% 1fr 10%;
+}
+
+.sidebar {
+	background-color: rgba(81, 62, 88, 0.8);
+	justify-content: center;
+}
+
+main {
+	padding: 10px;
+	background-color:rgba(220, 220, 220, .8);
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+}
+
+footer {
+	padding: 5px;
+	background-color: seagreen;
+	font-family: Consolas;
+	font-size: small;
+}
