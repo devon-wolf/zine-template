@@ -11,6 +11,7 @@ body, html {
 
 body {
 	background-color: rgb(154, 199, 199);
+	font-family: monospace;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 }
@@ -25,7 +26,6 @@ header {
 
 .masthead {
 	padding: 5px;
-	font-family: 'Roboto Slab', serif;
 	font-size: x-large;
 	font-weight: bolder;
 	color: rgb(220, 220, 220);
@@ -37,7 +37,6 @@ header {
 nav {
 	padding: 5px;
 	background-color: rgba(113, 113, 129, .70);
-	font-family: Consolas;
 	font-size: small;
 	color:gainsboro;
 	display: flex;
@@ -58,16 +57,33 @@ nav {
 main {
 	padding: 10px;
 	background-color:rgba(220, 220, 220, .8);
-	font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-	font-family: 'Roboto Slab', serif;
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: min-content 1fr 1fr 1fr;
+	
+}
+
+.grid-header {
+	background-color: coral;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	height:fit-content;
+}
+
+.box {
+	height: 100%;
+	width: 100%;
+	border: solid 1px aliceblue;
+	background-color: rgb(14, 52, 53);
+	align-self: center;
+	justify-self: center;
 }
 
 footer {
 	padding: 5px;
 	background-color: seagreen;
-	font-family: Consolas;
 	font-size: small;
 }

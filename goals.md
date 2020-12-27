@@ -9,6 +9,6 @@ With that in mind, what features does the site need to have?
 
 - As mentioned above, a landing page for each contributor
 - A dedicated page for each individual submission
-	- it seems messy and inefficient to directly write each submission into its respective HTML file; I'll probably write a template file and feed the contributions from their own files
-- A homepage for orientation
-- A navigation bar present on all pages
+	- I'll need to make some database-related choices in order to store submissions and their metadata in an orderly, efficient way (instead of ramming all the text into horrible webs of individual html files - I didn't love my Rails experiment, but I did love that)
+- ~~A homepage for orientation~~ (I mean, the page exists; not like there's anything useful there, but it exists...)
+- ~~A navigation bar present on all pages~~
