@@ -1,0 +1,7 @@
+To do:
+- add a "Downloads" link to the footer; will link to a page that links to zine files (without having to load the whole zine page)
+- add some sort of data structure to hold work and contributor info
+- build the views for individual contributors and works
+- REACH: add a commenting feature
+- REACH: add an in-site form for adding new works and contributors
+- REACH: add authentication for unique users and the ability to edit one's own works/contributor page/comments

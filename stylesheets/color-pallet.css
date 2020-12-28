@@ -1,0 +1,29 @@
+body {
+	background-color: rgb(131, 133, 130);
+}
+
+.masthead {
+	background-color: rgba(23, 128, 146, .80);
+	
+	color: mintcream;
+	text-shadow: midnightblue 1px 1px;
+}
+
+nav {
+	background-color: rgba(60, 179, 114, 0.70);
+
+	color: midnightblue;
+	text-shadow:rgba(23, 128, 146, .80) 1px 1px;
+}
+
+nav a::before {
+	color: mintcream;
+}
+
+nav a:active {
+	background: rgb(87, 131, 106);
+}
+
+main {
+	background-color: rgba(245, 255, 250, .70);
+}
