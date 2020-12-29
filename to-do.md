@@ -5,10 +5,19 @@
 	- ~~Copyright~~
 	- ~~Source Code~~
 	- ~~Downloads~~
-- add some sort of data structure to hold work and contributor info
 - ~~build the views for individual contributors and works~~
+- ~~create optimized/navigable/pleasing to read layout for "read as zine" page~~
+
+- continue work on 'read as zine' section'
+- **add some sort of data structure to hold work and contributor info**
+
+
 - **DON'T FORGET**: the HTML files need to be grouped into folders and renamed as-needed, meaning the links in the navbar will need to be updated across all the pages once this is done.
-- create optimized/navigable/pleasing to read layout for "read as zine" page
-- **REACH**: add a commenting feature
-- **REACH**: add an in-site form for adding new works and contributors
-- **REACH**: add authentication for unique users and the ability to edit one's own works/contributor page/comments
+
+
+## Reach Goals
+- add toggles for dark mode, high contrast, serif fonts
+- add mobile-optimized nav buttons
+- add a commenting feature
+- add an in-site form for adding new works and contributors
+- add authentication for unique users and the ability to edit one's own works/contributor page/comments
