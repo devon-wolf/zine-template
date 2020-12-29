@@ -1,0 +1,119 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(131, 133, 130);
+	font-family: monospace;
+}
+
+.mid-body {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 15% 70% 15%;
+}
+
+aside {
+
+}
+
+.sidebar {
+
+}
+
+.float-bar {
+
+}
+
+nav {
+	background-color: rgba(60, 179, 114, 0.70);
+	padding: 5px;
+	color: midnightblue;
+	text-shadow:rgba(23, 128, 146, .80) 1px 1px;
+	height: 100%;
+}
+
+.content-nav {
+
+}
+
+.float-nav {
+
+}
+
+.content-nav ul {
+
+}
+
+.float-nav ul {
+
+}
+
+.content-nav li {
+
+}
+
+.float-nav li {
+
+}
+
+.content-nav a:link, .content-nav a:visited {
+
+}
+
+.float-nav a:link, .float-nav a:visited {
+
+}
+
+.content-nav a:hover {
+
+}
+
+.content-nav a:active {
+
+}
+
+.float-nav a:hover {
+
+}
+
+.float-nav a:active {
+
+}
+
+main {
+	background-color: rgba(245, 255, 250, .70);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+
+}
+
+section, article {
+	min-height: 250px;
+	width: 100%;
+	border:rgba(23, 128, 146, .80) 2px dotted;
+	padding: 7%;
+}
+
+h2 {
+	background-color: rgb(86, 97, 129);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+p {
+	background-color: silver;
+}
