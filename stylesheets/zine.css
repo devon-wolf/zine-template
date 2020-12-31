@@ -10,7 +10,7 @@ body, html {
 }
 
 body {
-	background-color: rgb(131, 133, 130);
+	background-color: rgb(97, 97, 96);
 	font-family: monospace;
 }
 
@@ -21,71 +21,95 @@ body {
 }
 
 aside {
-
+	
 }
 
 .sidebar {
-
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .float-bar {
-
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 nav {
-	background-color: rgba(60, 179, 114, 0.70);
-	padding: 5px;
-	color: midnightblue;
-	text-shadow:rgba(23, 128, 146, .80) 1px 1px;
+	color: mintcream;
+	text-shadow:midnightblue 1px 1px;
 	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
 }
 
 .content-nav {
-
+	text-align: right;
+	font-size: 14px;
+	padding-top: .67em;
 }
 
 .float-nav {
-
+	justify-content: flex-end;
+	font-size: 12px;
+	padding-bottom: .67em;
 }
 
-.content-nav ul {
-
+nav li {
+	padding: 5px;
 }
 
-.float-nav ul {
-
+.content-item {
+	list-style: none;
+	padding-right: .67em;
+	background-color: rgba(23, 128, 146, .15);
+	border-bottom: solid 1px rgba(96, 114, 105, 0.9);
+	border-right: solid 1px  rgba(96, 114, 105, 0.9);
+	border-radius: 2px;
+	margin-bottom: 2px;
 }
 
-.content-nav li {
+details > summary {
+	cursor: pointer;
+	outline: none;
+}
 
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+.dropdown {
+	border-bottom: solid 2px rgba(91, 91, 92, 0.9);
+	border-right: solid 2px  rgba(96, 114, 105, 0.9);
+	background-color: rgba(23, 128, 146, .15);
+	list-style: none;
 }
 
 .float-nav li {
-
+	list-style: circle;
 }
 
 .content-nav a:link, .content-nav a:visited {
-
+	text-decoration: none;
+	color: inherit;
 }
 
 .float-nav a:link, .float-nav a:visited {
-
+	text-decoration: none;
+	color: inherit;
 }
 
-.content-nav a:hover {
-
+.content-nav a:hover, .float-nav a:hover, summary:hover {
+	color: rgb(194, 233, 184);
+	text-shadow: none;
 }
 
-.content-nav a:active {
-
-}
-
-.float-nav a:hover {
-
-}
-
-.float-nav a:active {
-
+.content-nav a:active, .float-nav a:active, summary:active {
+	color:midnightblue;
+	text-shadow: mintcream;
 }
 
 main {
@@ -93,21 +117,22 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-size: 16px;
 }
 
 h1 {
-
+	background-color:rgba(23, 128, 146, .40);
+	padding: 15px;
+	border-radius: 30px;
 }
 
 section, article {
 	min-height: 250px;
 	width: 100%;
-	border:rgba(23, 128, 146, .80) 2px dotted;
-	padding: 7%;
+	padding: 5% 7%;
 }
 
 h2 {
-	background-color: rgb(86, 97, 129);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -115,5 +140,5 @@ h2 {
 }
 
 p {
-	background-color: silver;
+
 }

@@ -1,7 +1,7 @@
-# TOOB Showcase Goals
-- create a site to display submissions from TOOB members
+# Showcase Goals
+- create a site to display submissions from group members
 
-That, truly, is the only hard and fast goal. Other things I'd *like* to do include allowing readers to leave comments/feedback on the submitted works, but all this really needs to do is be a place to read our collected submissions.
+That, truly, is the only hard and fast goal. Other things I'd *like* to do include allowing readers to leave comments/feedback on the submitted works, but all this really needs to do is be a place to read/view collected submissions.
 
 With that in mind, what features does the site need to have?
 - A table of contents/index:
@@ -9,6 +9,6 @@ With that in mind, what features does the site need to have?
 
 - As mentioned above, a landing page for each contributor
 - A dedicated page for each individual submission
-	- I'll need to make some database-related choices in order to store submissions and their metadata in an orderly, efficient way (instead of ramming all the text into horrible webs of individual html files - I didn't love my Rails experiment, but I did love that)
+	- I'll need to make some database-related choices in order to store submissions and their metadata in an orderly, efficient way
 - ~~A homepage for orientation~~ (I mean, the page exists; not like there's anything useful there, but it exists...)
 - ~~A navigation bar present on all pages~~

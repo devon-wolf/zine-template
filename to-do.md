@@ -5,10 +5,22 @@
 	- ~~Copyright~~
 	- ~~Source Code~~
 	- ~~Downloads~~
-- add some sort of data structure to hold work and contributor info
 - ~~build the views for individual contributors and works~~
+- ~~create optimized/navigable/pleasing to read layout for "read as zine" page~~
+
+- continue work on 'read as zine' section
+- **add some sort of data structure to hold work and contributor info**
+- determine how images should be hosted/managed; as a showcase-oriented project, artwork should be able to be displayed at high quality, ideally full resolution, so whether or not the images can live in this site's database (as opposed to using third-party hosting) will depend on the scope of the project the template is used for and the available hosting/server resource
+	- determine whether the code will be the same in the template for third-party versus self-hosting of images
+- include some test images and ensure they are scaling correctly/determine what the best display options might be
+
+
 - **DON'T FORGET**: the HTML files need to be grouped into folders and renamed as-needed, meaning the links in the navbar will need to be updated across all the pages once this is done.
-- create optimized/navigable/pleasing to read layout for "read as zine" page
-- **REACH**: add a commenting feature
-- **REACH**: add an in-site form for adding new works and contributors
-- **REACH**: add authentication for unique users and the ability to edit one's own works/contributor page/comments
+
+
+## Reach Goals
+- add toggles for dark mode, high contrast, serif fonts (and any other reading-oriented tweaks I might come up with...)
+- add mobile-optimized nav buttons
+- add a commenting feature
+- add an in-site form for adding new works and contributors
+- add authentication for unique users and the ability to edit one's own works/contributor page/comments (both comments one has made on others' works and comments others have made on one's own works)
