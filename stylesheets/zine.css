@@ -37,7 +37,6 @@ aside {
 }
 
 nav {
-	padding: 5px;
 	color: mintcream;
 	text-shadow:midnightblue 1px 1px;
 	height: 100%;
@@ -50,23 +49,43 @@ nav {
 .content-nav {
 	text-align: right;
 	font-size: 14px;
-	padding-top: 30px;
+	padding-top: .67em;
 }
 
 .float-nav {
 	justify-content: flex-end;
 	font-size: 12px;
-	padding-bottom: 16px;
+	padding-bottom: .67em;
 }
 
 nav li {
 	padding: 5px;
 }
 
-
-.content-nav li {
+.content-item {
 	list-style: none;
-	padding-right: 20px;
+	padding-right: .67em;
+	background-color: rgba(23, 128, 146, .15);
+	border-bottom: solid 1px rgba(96, 114, 105, 0.9);
+	border-right: solid 1px  rgba(96, 114, 105, 0.9);
+	border-radius: 2px;
+	margin-bottom: 2px;
+}
+
+details > summary {
+	cursor: pointer;
+	outline: none;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+.dropdown {
+	border-bottom: solid 2px rgba(91, 91, 92, 0.9);
+	border-right: solid 2px  rgba(96, 114, 105, 0.9);
+	background-color: rgba(23, 128, 146, .15);
+	list-style: none;
 }
 
 .float-nav li {
@@ -83,22 +102,12 @@ nav li {
 	color: inherit;
 }
 
-.content-nav a:hover {
+.content-nav a:hover, .float-nav a:hover, summary:hover {
 	color: rgb(194, 233, 184);
 	text-shadow: none;
 }
 
-.content-nav a:active {
-	color:midnightblue;
-	text-shadow: mintcream;
-}
-
-.float-nav a:hover {
-	color: rgb(194, 233, 184);
-	text-shadow: none;
-}
-
-.float-nav a:active {
+.content-nav a:active, .float-nav a:active, summary:active {
 	color:midnightblue;
 	text-shadow: mintcream;
 }
@@ -112,7 +121,9 @@ main {
 }
 
 h1 {
-
+	background-color:rgba(23, 128, 146, .40);
+	padding: 15px;
+	border-radius: 30px;
 }
 
 section, article {
