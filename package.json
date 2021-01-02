@@ -1,0 +1,27 @@
+{
+  "name": "zine-template",
+  "version": "1.0.0",
+  "description": "A template site designed with a zine-type format in mind. Originally intended as a home for a year-end showcase for a group of writers and artists. Feel free to fork and use for projects that might make good use of the format!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/devon-wolf/zine-template.git)"
+  },
+  "author": "devon-wolf",
+  "license": "(GPL-3.0-or-later)",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "nodemon": "^2.0.6"
+  }
+}
