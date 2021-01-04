@@ -1,66 +1,24 @@
 import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
+import models from './models';
+import routes from './routes';
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-
-let users = {
-	1: {
-		id: '1',
-		username: 'ripvanwinkle'
-	},
-	2: {
-		id: '2',
-		username: 'pinewolf'
-	}
-};
-
-let messages = {
-	1: {
-		id: '1',
-		text: 'I could go for a nap',
-		userID: '1'
-	},
-	2: {
-		id: '2',
-		text: 'do you smell food?',
-		userID: '2'
-	}
-};
-
-app.get('/users', (req, res) => {
-	return res.send(Object.values(users));
+app.use((req, res, next) => {
+	req.context = {
+		models,
+		me: models.users[1]
+	};
+	next();
 });
-
-app.get('/users/:userID', (req, res) => {
-	return res.send(users[req.params.userID]);
-});
-
-app.get('/messages', (req, res) => {
-	return res.send(Object.values(messages));
-});
-
-app.get('/messages/:messageID', (req, res) => {
-	return res.send(messages[req.params.messageID]);
-});
-
-/* app.get('/users', (req, res) => {
-	return res.send('GET HTTP method on user resource');
-});
-
-app.post('/users', (req, res) => {
-	return res.send('POST HTTP method on user resource');
-});
-
-app.put('/users/:userID', (req, res) => {
-	return res.send(`PUT HTTP method on user/${req.params.userID} resource`);
-});
-
-app.delete('/users/:userID', (req, res) => {
-	return res.send(`DELETE HTTP method on user/${req.params.userID} resource`);
-}); */
+app.use('/session', routes.session);
+app.use('/users', routes.user);
+app.use('/messages', routes.message);
 
 app.listen(process.env.PORT, () =>
 	console.log(`Example app listening on port ${process.env.PORT}!!`),
