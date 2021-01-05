@@ -1,29 +1,25 @@
-// Placeholder/test values prior to setting up database
-let users = {
-	1: {
-		id: '1',
-		username: 'ripvanwinkle'
-	},
-	2: {
-		id: '2',
-		username: 'pinewolf'
+import Sequelize from 'sequelize';
+
+const sequelize = new Sequelize(
+	process.env.DATABASE,
+	process.env.DATABASE_USER,
+	process.env.DATABASE_PASSWORD,
+	{
+		dialect: 'postgres',
 	}
+);
+
+const models = {
+	User: sequelize.import('./user'),
+	Message: sequelize.import('./message')
 };
 
-let messages = {
-	1: {
-		id: '1',
-		text: 'I could go for a nap',
-		userID: '1'
-	},
-	2: {
-		id: '2',
-		text: 'do you smell food?',
-		userID: '2'
-	}
-};
+Object.keys(models).forEach(key => {
+	if ('associate' in models[key]) {
+		models[key].associate(models);
+	};
+});
 
-export default {
-	users,
-	messages
-};
+export { sequelize };
+
+export default models;
