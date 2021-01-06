@@ -4,21 +4,21 @@ const user = (sequelize, DataTypes) => {
 		username: {
 			type: DataTypes.STRING,
 			unique: true,
-			allowNull: false,
+			/* allowNull: false,
 			validate: {
 				notEmpty: true,
-			},
-		},
+			}, */
+		}
 	});
 
 	// create association between user and message models
-	User.associate = models => {
+	User.associate = (models) => {
 		User.hasMany(models.Message, { onDelete: 'CASCADE' }); 
 		/* will want to remove/update this cascading delete when working with the actual values I intend; this is for the tutorial */
 	};
 
 	// let user login by email or username
-	User.findbyLogin = async login => {
+	User.findbyLogin = async (login) => {
 		let user = await User.findOne({
 			where: { username: login }
 		});

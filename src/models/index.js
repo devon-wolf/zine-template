@@ -1,17 +1,19 @@
-import Sequelize from 'sequelize';
+import Sequelize, { DataTypes } from 'sequelize';
+import user from './user.js';
+import message from './message.js';
 
 const sequelize = new Sequelize(
 	process.env.DATABASE,
 	process.env.DATABASE_USER,
 	process.env.DATABASE_PASSWORD,
 	{
-		dialect: 'postgres',
+		dialect: 'postgres'
 	}
 );
 
 const models = {
-	User: sequelize.import('./user'),
-	Message: sequelize.import('./message')
+	User: user(sequelize, DataTypes),
+	Message: message(sequelize, DataTypes)
 };
 
 Object.keys(models).forEach(key => {
