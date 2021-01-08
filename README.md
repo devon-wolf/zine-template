@@ -3,4 +3,4 @@ A template site designed with a zine-type format in mind. Originally intended as
 
 Currently very in-progress, see [to-do list](./to-do.md) for details.
 
-Routes, models, and general Express setup was done by working through [this](https://www.robinwieruch.de/node-express-server-rest-api) tutorial (and the Node.js with Babel and Express.js setup before it, all from [Robin Wieruch](https://www.robinwieruch.de/about)).
+Routes, models, and general Express setup was done by working through [this](https://www.robinwieruch.de/node-express-server-rest-api) tutorial (and the Node.js with Babel and Express.js setup before it. Final steps to connect Postgres to the app come from [this](https://www.robinwieruch.de/postgresql-express-node-rest-api) tutorial.
