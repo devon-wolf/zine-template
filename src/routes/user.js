@@ -2,12 +2,14 @@ import { Router } from 'express';
 
 const router = Router();
 
-router.get('/', (req, res) => {
-	return res.send(Object.values(req.context.models.users));
+router.get('/', async (req, res) => {
+	const users = await req.context.models.User.findAll();
+	return res.send(users);
 });
 
-router.get('/:userID', (req, res) => {
-	return res.send(req.context.models.users[req.params.userID]);
+router.get('/:userID', async (req, res) => {
+	const user = await req.context.models.User.findByPk(req.params.userID);
+	return res.send(user);
 });
 
 export default router;

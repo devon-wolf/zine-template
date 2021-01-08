@@ -4,10 +4,6 @@ const user = (sequelize, DataTypes) => {
 		username: {
 			type: DataTypes.STRING,
 			unique: true,
-			/* allowNull: false,
-			validate: {
-				notEmpty: true,
-			}, */
 		}
 	});
 

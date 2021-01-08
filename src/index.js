@@ -2,6 +2,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
 import models, { sequelize } from './models';
+// note, tutorial code doesn't include sequelize on that line
 import routes from './routes';
 
 const app = express();
@@ -13,9 +14,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// custom middleware now that database is seeded
+app.use(async (req, res, next) => {
+	req.context = {
+		models,
+		me: await models.User.findByLogin('devon')
+	};
+	next();
+});
+
 // routes
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
+app.use('/session', routes.session);
 
 
 // START
@@ -64,17 +75,3 @@ const createUsersWithMessages = async () => {
 		}
 	);
 };
-
-
-// moving it down here didn't seem to resolve the issue with models.users[1]
-// custom middleware now that database is seeded
-app.use((req, res, next) => {
-	req.context = {
-		models,
-		me: models.users[1]
-	};
-	next();
-});
-
-// route to session model now that database is seeded
-app.use('/session', routes.session);
